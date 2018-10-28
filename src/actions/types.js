@@ -1,0 +1,1 @@
+export const NAVBAR_DECIDE_TRANSPARENT = 'navbar_decide_transparent';
