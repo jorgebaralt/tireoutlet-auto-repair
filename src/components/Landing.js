@@ -30,8 +30,7 @@ const styles = {
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		position: 'fixed',
-		zIndex: -1,
-		top: 0,
+		top: 0
 	},
 	introTextContainer: {
 		marginLeft: 'auto',

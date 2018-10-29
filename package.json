@@ -6,6 +6,7 @@
     "animate.css": "^3.7.0",
     "materialize-css": "^1.0.0",
     "react": "^16.6.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",

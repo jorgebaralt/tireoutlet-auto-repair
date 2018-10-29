@@ -26,9 +26,44 @@ a.sidenav-trigger:hover {
   50%  { opacity:0; }
   100% { opacity:1; }
 }
+
 .animate-flicker {
    -webkit-animation: flickerAnimation 2s infinite;
    -moz-animation: flickerAnimation 2s infinite;
    -o-animation: flickerAnimation 2s infinite;
     animation: flickerAnimation 2s infinite;
+}
+
+.card{
+  width: 100%; 
+  position: relative;
+  border: 1px solid #FFC107;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3)
+}
+
+.wwd-card{
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  transition:all 0.3s ease-in-out;
+  opacity:1;
+}
+
+.wwd-card:hover , .wwd-card:focus {
+  transform: scale(1.05);
+
+}
+.wwd-card:hover img, .wwd-card:focus img{
+  opacity:0.2;
+}
+
+.wwd-card p{
+  visibility: hidden;
+
+}
+
+.wwd-card:hover p, .wwd-card:focus p{
+  visibility: visible;
+  font-weight: 400;
+
 }
