@@ -4,6 +4,7 @@ import * as actions from '../actions';
 
 import Landing from './Landing';
 import NavBar from './NavBar';
+import ScrollAnimation from 'react-animate-on-scroll';
 class Home extends Component {
 	componentWillMount() {
 		this.props.decideTransparent(true);
@@ -14,16 +15,19 @@ class Home extends Component {
 			<div>
 				<NavBar />
 				<Landing />
-				<div
-					style={{
-						height: 10000,
-						position: 'relative',
-						top: '100vh',
-						backgroundColor: 'white',
-					}}
+				
+					<div
+						id="asd"
+						style={{
+							height: 10000,
+							position: 'relative',
+							top: '100vh',
+							backgroundColor: 'white',
+						}}
 				>
 					asdasd
 				</div>
+				
 			</div>
 		);
 	}

@@ -5,7 +5,6 @@ import Home from './Home';
 import '../App.css';
 import Mechanic from './Mechanic';
 
-
 class App extends Component {
 	render() {
 		return (

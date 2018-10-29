@@ -12,7 +12,7 @@ class Mechanic extends Component {
 		return (
 			<div>
 				<NavBar />
-				<div> Mechanic</div>
+				<div className="container"> Mechanic</div>
 			</div>
 		);
 	}

@@ -2,21 +2,19 @@ import React from 'react';
 import LandingImage from '../assets/LandingImage.JPG';
 
 const Landing = () => {
-	const { landingImage, introTextContainer } = styles;
+	const {
+		landingImage,
+		introTextContainer,
+		introTextStyle,
+		iconStyle,
+	} = styles;
 	return (
 		<div style={landingImage}>
 			<div style={introTextContainer}>
-				<h1
-					style={{
-						color: '#E0E0E0',
-						textAlign: 'center',
-						fontWeight: 700,
-						fontFamily: 'Roboto Mono',
-						top: '40vh',
-					}}
-				>
-					Build, Fix & Maintain your Vehicle
-				</h1>
+				<h1 style={introTextStyle}>Build, Fix & Maintain your Vehicle</h1>
+				<i className="material-icons animate-flicker" style={iconStyle}>
+					keyboard_arrow_down
+				</i>
 			</div>
 		</div>
 	);
@@ -36,7 +34,6 @@ const styles = {
 		top: 0,
 	},
 	introTextContainer: {
-		width: '100%',
 		marginLeft: 'auto',
 		marginRight: 'auto',
 		marginTop: '40vh',
@@ -44,6 +41,21 @@ const styles = {
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
+		position: 'relative',
+		textAlign: 'center',
+	},
+	introTextStyle: {
+		color: '#E0E0E0',
+		textAlign: 'center',
+		fontWeight: 700,
+		fontFamily: 'Roboto Mono',
+		top: '40vh',
+	},
+	iconStyle: {
+		color: '#FFCA28',
+		fontSize: 150,
+		textAlign: 'center',
+		marginTop: '15vh',
 	},
 };
 
