@@ -5,6 +5,9 @@ import * as actions from '../actions';
 import Landing from './Landing';
 import NavBar from './NavBar';
 import WhatWeDo from './WhatWeDo';
+import Brands from './Brands';
+import Information from './Information';
+
 class Home extends Component {
 	componentWillMount() {
 		this.props.decideTransparent(true);
@@ -16,9 +19,9 @@ class Home extends Component {
 				<NavBar />
 				<Landing />
 				<div style={styles.contentStyle}>
-					<div id="what-we-do"  style={{ textAlign: 'center', paddingLeft: '10%', paddingRight:'10%' }}>
-						<WhatWeDo />
-					</div>
+					<WhatWeDo />
+					<Brands />
+					<Information />
 				</div>
 			</div>
 		);
@@ -31,10 +34,9 @@ const styles = {
 		top: '100vh',
 		backgroundColor: 'white',
 		paddingTop: '1%',
-		height: 'auto',
 		display: 'block',
 		paddingBottom: 0,
-		width: '100%'
+		width: '100%',
 	},
 };
 

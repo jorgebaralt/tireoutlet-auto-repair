@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 class NavBar extends Component {
 	state = { transparentNavBar: true, showDropdown: false };
@@ -44,25 +43,23 @@ class NavBar extends Component {
 			<div>
 				<ul
 					className="collection"
-					style={
-						this.state.showDropdown ? show : hide
-					}
+					style={this.state.showDropdown ? show : hide}
 				>
 					<Link to="/" className="collection-item" style={itemDropdownStyle}>
-						Home
+						HOME
 					</Link>
 					<Link
 						to="/mechanic"
 						className="collection-item"
 						style={itemDropdownStyle}
 					>
-						Mechanic
+						MECHANIC
 					</Link>
 					<Link to="/" className="collection-item" style={itemDropdownStyle}>
-						Lift-Kit
+						LIFT-KIT
 					</Link>
 					<Link to="/" className="collection-item" style={itemDropdownStyle}>
-						Gallery
+						GALLERY
 					</Link>
 				</ul>
 			</div>
@@ -97,20 +94,23 @@ class NavBar extends Component {
 							>
 								Tire Outlet
 							</Link>
-							<a className="sidenav-trigger">
-								<i
-									onClick={() => {
-										if (this.state.showDropdown) {
-											this.setState({ showDropdown: false });
-										} else {
-											this.setState({ showDropdown: true });
-										}
-									}}
-									className="material-icons"
-								>
-									menu
-								</i>
-							</a>
+							<div
+								className={ this.state.showDropdown ? 'Open DrawerToggle' : 'DrawerToggle' }
+								style={
+									this.props.navBarEffect && this.state.transparentNavBar
+										? { paddingTop: 26 }
+										: {}
+								}
+								onClick={() => {
+									if (this.state.showDropdown) {
+										this.setState({ showDropdown: false });
+									} else {
+										this.setState({ showDropdown: true });
+									}
+								}}
+							>
+								<div />
+							</div>
 							<ul id="nav-mobile" className="right hide-on-med-and-down">
 								<li>
 									<Link
@@ -121,7 +121,7 @@ class NavBar extends Component {
 												: navBarTitlesRegular
 										}
 									>
-										Home
+										HOME
 									</Link>
 								</li>
 								<li>
@@ -133,7 +133,7 @@ class NavBar extends Component {
 												: navBarTitlesRegular
 										}
 									>
-										Mechanic
+										MECHANIC
 									</Link>
 								</li>
 								<li>
@@ -145,7 +145,7 @@ class NavBar extends Component {
 												: navBarTitlesRegular
 										}
 									>
-										Lift-Kit
+										LIFT-KIT
 									</Link>
 								</li>
 								<li>
@@ -157,7 +157,7 @@ class NavBar extends Component {
 												: navBarTitlesRegular
 										}
 									>
-										Gallery
+										GALLERY
 									</Link>
 								</li>
 							</ul>
@@ -181,18 +181,20 @@ const styles = {
 	},
 	regularNavBar: {
 		backgroundColor: '#FFC107',
-		opacity: 0.8,
+		opacity: 0.95,
 		transition: 'padding-top 0.4s, padding-bottom 0.4s, background-color 1s',
 	},
 	navBarTitlesTransparent: {
 		color: 'white',
 		fontSize: 22,
 		fontWeight: 300,
+		letterSpacing: 3,
 	},
 	navBarTitlesRegular: {
 		color: 'black',
 		fontSize: 22,
 		fontWeight: 300,
+		letterSpacing: 3,
 	},
 	dropdownStyleHidden: {
 		border: 'none',

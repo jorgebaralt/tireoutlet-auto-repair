@@ -3,20 +3,32 @@ import Fix from '../assets/Fix.jpg';
 import Toyota from '../assets/Toyota.jpg';
 import Maintain from '../assets/Maintain.jpg';
 
-class WhatWeDo extends Component {
-	render() {
+const WhatWeDo = (props) => {
+
+		const {
+			contentStyle,
+			titleStyle,
+			subtitleStyle,
+			imgStyle,
+			textImgStyle,
+			rowStyle,
+			colStyle,
+		} = styles;
 		return (
-			<div>
-				<h2 style={{ fontWeight: 500, marginTop: '5%' }}>What we do</h2>
-				<h5 style={{ color: 'gray' }}>We provide the best work and quality</h5>
-				<div className="row" style={{ marginTop: '4%' }}>
-					<div className="col-md-4" style={{ paddingLeft: '5%', paddingRight: '5%' }}>
+			<div id="what-we-do" style={contentStyle}>
+				<h2 style={titleStyle}>What we do</h2>
+				<h5 style={subtitleStyle}>We provide the best work and quality</h5>
+				<div className="row" style={rowStyle}>
+					<div
+						className="col-lg-4"
+						style={colStyle}
+					>
 						<div className="card wwd-card">
 							<div className="card-image">
-								<img src={Toyota} style={{ height: 230 }} />
-								<p class="card-title" style={{ color: 'black' }}>
+								<img src={Toyota} style={imgStyle} alt="" />
+								<p class="card-title" style={textImgStyle}>
 									We have an extensive inventory of wheels, tires, suspension,
-									and more. We do offer every brand!
+									and more.
 								</p>
 							</div>
 							<div className="card-content">
@@ -25,12 +37,15 @@ class WhatWeDo extends Component {
 							</div>
 						</div>
 					</div>
-					<div className="col-md-4" style={{ paddingLeft: '5%', paddingRight:'5%' }}>
+					<div
+						className="col-lg-4"
+						style={colStyle}
+					>
 						<div className="card wwd-card">
-							<div className="card-image" >
-								<img src={Fix} style={{ height: 230 }} />
-								<p class="card-title" style={{ color: 'black' }}>
-									As an auto repair shop, we also fix any issue with your car.
+							<div className="card-image">
+								<img src={Fix} style={imgStyle} alt="" />
+								<p class="card-title" style={textImgStyle}>
+									We can identify and repair anything wrong about your vehicle
 								</p>
 							</div>
 							<div className="card-content">
@@ -39,12 +54,16 @@ class WhatWeDo extends Component {
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4" style={{ paddingLeft: '5%', paddingRight: '5%' }}>
+					<div
+						class="col-lg-4"
+						style={colStyle}
+					>
 						<div class="card wwd-card">
 							<div class="card-image">
-								<img src={Maintain} style={{ height: 230 }} />
-								<p class="card-title" style={{ color: 'black' }}>
-									Oil change, filters, new tires, A/C and more. We will help you keep your vehicle as if it were brand new
+								<img src={Maintain} style={imgStyle} alt="" />
+								<p class="card-title" style={textImgStyle}>
+									Oil change, filters, new tires and more.
+									Keep your vehicle brand new
 								</p>
 							</div>
 							<div class="card-content">
@@ -57,6 +76,20 @@ class WhatWeDo extends Component {
 			</div>
 		);
 	}
-}
+
+
+const styles = {
+	contentStyle: {
+		textAlign: 'center',
+		paddingLeft: '10%',
+		paddingRight: '10%',
+	},
+	titleStyle: { fontWeight: 500, marginTop: '5%' },
+	subtitleStyle: { color: 'gray' },
+	rowStyle: { marginTop: '4%' },
+	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
+	imgStyle: { height: 'auto' },
+	textImgStyle: { color: 'black', padding: '2%', fontSize: '1.6vw' },
+};
 
 export default WhatWeDo;

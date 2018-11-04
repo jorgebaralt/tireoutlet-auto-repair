@@ -9,11 +9,14 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.6.0",
+    "react-google-maps": "^9.4.5",
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
+    "react-slick": "^0.23.2",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

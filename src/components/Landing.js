@@ -54,7 +54,7 @@ const styles = {
 		color: '#FFCA28',
 		fontSize: 150,
 		textAlign: 'center',
-		marginTop: '15vh',
+		marginTop: '20vh',
 	},
 };
 

@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
 body {
 	font-family: 'Roboto', sans-serif
 }
@@ -59,11 +62,90 @@ a.sidenav-trigger:hover {
 
 .wwd-card p{
   visibility: hidden;
-
+  font-weight: 400;
 }
 
 .wwd-card:hover p, .wwd-card:focus p{
   visibility: visible;
   font-weight: 400;
+  transition: visibility 0.3s ease-in-out;
+}
 
+.slick-dots{
+  position: static
+}
+
+#takeme{
+  color: white
+}
+
+#instagram, #facebook{
+  color: #FFC107
+}
+
+/* Drawer Toggle */
+.DrawerToggle {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    margin-left: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.DrawerToggle div {
+    width: 90%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.25s ease-out;
+}
+
+.DrawerToggle div:after {
+    content: '';
+    display: block;
+    transform:translateY(-13px);
+    height: 3px;
+    background-color: white;
+    transition: all 0.25s ease-out;
+}
+
+.DrawerToggle div:before {
+    content: '';
+    display: block;
+    transform:translateY(10px);
+    height: 3px;
+    background-color: white;
+    transition: all 0.25s ease-out;
+}
+
+.Open div {
+    width: 90%;
+    height: 3px;
+    background-color: transparent;
+}
+
+.Open div:after {
+    content: '';
+    display: block;
+    transform: translateY(-3px) rotate(225deg);
+    height: 3px;
+    background-color: white;
+}
+
+.Open div:before {
+    content: '';
+    display: block;
+    transform: rotate(-45deg);
+    height: 3px;
+    background-color: white;
+}
+
+@media (min-width: 500px) {
+    .DrawerToggle {
+        display: none;
+    }
 }

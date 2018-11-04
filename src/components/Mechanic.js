@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 
 class Mechanic extends Component {
 	componentWillMount() {
-		this.props.decideTransparent(false);
+		this.props.decideTransparent(true);
 	}
 
 	render() {
