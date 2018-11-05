@@ -149,7 +149,7 @@ a.sidenav-trigger:hover {
     background-color: white;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 995px) {
     .DrawerToggle {
         display: none;
     }
@@ -176,4 +176,16 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 fieldset{
   border-color: white !important
+}
+
+.card .card-image .card-title {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

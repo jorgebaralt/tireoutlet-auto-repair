@@ -1,21 +1,32 @@
 import React from 'react';
-import LandingImage from '../assets/LandingImage.JPG';
 import { Link } from 'react-scroll';
 
-const Landing = () => {
+const Landing = (props) => {
 	const {
-		landingImage,
 		introTextContainer,
 		introTextStyle,
 		iconStyle,
 	} = styles;
+
+	const landingImage= {
+		backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) ), url(${props.image})`,
+		height: '100vh',
+		width: '100vw',
+		backgroundAttachment: 'fixed',
+		backgroundPosition: 'center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		position: 'fixed',
+		top: 0,
+	}
+	
 	return (
 		<div style={landingImage}>
 			<div style={introTextContainer}>
-				<h1 style={introTextStyle}>Build, Fix & Maintain your Vehicle</h1>
+				<h1 style={introTextStyle}>{props.title}</h1>
 				<Link
 					activeClass="active"
-					to="what-we-do"
+					to="first"
 					spy={true}
 					smooth={true}
 					duration={800}
@@ -34,17 +45,7 @@ const Landing = () => {
 };
 
 const styles = {
-	landingImage: {
-		backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) ), url(${LandingImage})`,
-		height: '100vh',
-		width: '100vw',
-		backgroundAttachment: 'fixed',
-		backgroundPosition: 'center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		position: 'fixed',
-		top: 0,
-	},
+	
 	introTextContainer: {
 		marginLeft: 'auto',
 		marginRight: 'auto',
@@ -55,6 +56,7 @@ const styles = {
 		backgroundSize: 'cover',
 		position: 'relative',
 		textAlign: 'center',
+		transform: 'translate(-50 %, -50 %)'
 	},
 	introTextStyle: {
 		color: '#E0E0E0',

@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-
-import Landing from './Landing';
 import NavBar from './NavBar';
-import WhatWeDo from './WhatWeDo';
-import Brands from './Brands';
-import Information from './Information';
-import Address from './Address';
 import Footer from './Footer';
-import LandingImage from '../assets/LandingImage.JPG';
+import Landing from './Landing';
+import OffRoad from '../assets/4x4.jpg';
 
-class Home extends Component {
+class Lift extends Component {
 	componentWillMount() {
 		window.scrollTo(0, 0);
+		this.props.changeActive('lift');
 		this.props.decideTransparent(true);
-		this.props.changeActive('home');
 	}
 
 	render() {
 		return (
 			<div>
 				<NavBar />
-				<Landing image={LandingImage} title={'Build, Fix & Maintain your Vehicle'}/>
+				<Landing
+					image={OffRoad}
+					title={'Suspension, Accessories, Wheels & More'}
+				/>
 				<div style={styles.contentStyle}>
-					<WhatWeDo />
-					<Brands />
-					<Information />
-					<Address />
 					<Footer />
 				</div>
 			</div>
@@ -49,4 +43,4 @@ const styles = {
 export default connect(
 	null,
 	actions
-)(Home);
+)(Lift);

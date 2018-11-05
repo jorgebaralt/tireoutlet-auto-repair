@@ -2,9 +2,7 @@ import React from 'react';
 import Fix from '../assets/Fix.jpg';
 import Toyota from '../assets/Toyota.jpg';
 import Maintain from '../assets/Maintain.jpg';
-import {
-	Element,
-} from 'react-scroll';
+import { Element } from 'react-scroll';
 
 const WhatWeDo = (props) => {
 	const {
@@ -17,7 +15,7 @@ const WhatWeDo = (props) => {
 		colStyle,
 	} = styles;
 	return (
-		<Element name="what-we-do">
+		<Element name="first">
 			<div style={contentStyle}>
 				<h2 style={titleStyle}>What we do</h2>
 				<h5 style={subtitleStyle}>We provide the best work and quality</h5>
@@ -84,7 +82,17 @@ const styles = {
 	rowStyle: { marginTop: '4%' },
 	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 	imgStyle: { height: 'auto' },
-	textImgStyle: { color: 'black', padding: '2%', fontSize: '16' },
+	textImgStyle: {
+		color: 'black',
+		wordWrap: 'break-word',
+		fontSize: '1.5em',
+		boxSizing: 'content-box',
+		heigth: 'auto',
+		padding: '1%',
+		overflow: 'hidden',
+		maxHeigth: '100%',
+		textOverflow: 'ellipsis'
+	},
 };
 
 export default WhatWeDo;

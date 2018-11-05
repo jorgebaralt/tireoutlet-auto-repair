@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
 	state = {
-		transparentNavBar: true,
+		transparentNavBar: false,
 		showDropdown: false,
 	};
 
 	componentDidMount() {
 		if (this.props.navBarEffect) {
+			this.setState({ transparentNavBar: true });
 			document.addEventListener('scroll', () => {
 				const isTop = window.scrollY;
 				if (isTop > 100) {
@@ -58,10 +59,18 @@ class NavBar extends Component {
 					>
 						SERVICES
 					</Link>
-					<Link to="/" className="collection-item" style={itemDropdownStyle}>
+					<Link
+						to="/lift"
+						className="collection-item"
+						style={itemDropdownStyle}
+					>
 						LIFT-KIT
 					</Link>
-					<Link to="/" className="collection-item" style={itemDropdownStyle}>
+					<Link
+						to="/gallery"
+						className="collection-item"
+						style={itemDropdownStyle}
+					>
 						GALLERY
 					</Link>
 				</ul>
@@ -145,7 +154,7 @@ class NavBar extends Component {
 								</li>
 								<li className={this.props.active === 'lift' ? 'active' : null}>
 									<Link
-										to="/"
+										to="/lift"
 										style={
 											this.state.transparentNavBar
 												? navBarTitlesTransparent
@@ -159,7 +168,7 @@ class NavBar extends Component {
 									className={this.props.active === 'gallery' ? 'active' : null}
 								>
 									<Link
-										to="/"
+										to="/gallery"
 										style={
 											this.state.transparentNavBar
 												? navBarTitlesTransparent
@@ -263,8 +272,8 @@ const styles = {
 const mapStateToProps = (state) => {
 	return {
 		navBarEffect: state.navBarEffect.transparent,
-		active: state.navBarEffect.active
-	 };
+		active: state.navBarEffect.active,
+	};
 };
 
 export default connect(mapStateToProps)(NavBar);

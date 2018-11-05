@@ -97,12 +97,12 @@ class Footer extends Component {
 									</Link>
 								</li>
 								<li>
-									<Link to="/" className="grey-text text-lighten-3" href="#!">
+									<Link to="/lift" className="grey-text text-lighten-3" href="#!">
 										LIFT-KIT
 									</Link>
 								</li>
 								<li>
-									<Link to="/" className="grey-text text-lighten-3" href="#!">
+									<Link to="/gallery" className="grey-text text-lighten-3" href="#!">
 										GALLERY
 									</Link>
 								</li>
