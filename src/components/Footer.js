@@ -25,8 +25,8 @@ class Footer extends Component {
 				}}
 				{...input}
 				{...custom}
+				error={meta.touched && meta.error}
 			/>
-
 		);
 	};
 
@@ -108,7 +108,7 @@ class Footer extends Component {
 				</div>
 				<div className="footer-copyright">
 					<div className="container">
-						Tire Outlet Auto Repair @2018
+						Tire Outlet Auto Repair @ 2018
 						<p className="grey-text text-lighten-4 right">
 							Developed by Jorge Baralt
 						</p>
@@ -148,7 +148,7 @@ function validate(value) {
 		errors.email = 'Please enter an email';
 	}
 	if (!value.description) {
-		errors.email = 'Please fill the description';
+		errors.description = 'Please fill the description';
 	}
 	return errors;
 }

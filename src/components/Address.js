@@ -24,9 +24,9 @@ const Address = () => {
 					style={{
 						backgroundColor: '#FFC107',
 						fontSize: 18,
-						position: 'absolute',
-						bottom: 15,
-						left: '43%',
+						position: 'relative',
+						bottom: 60,
+						textAlign: 'center'
 					}}
 					target="_blank"
 					rel="noopener noreferrer"

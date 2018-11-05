@@ -84,7 +84,7 @@ const styles = {
 	rowStyle: { marginTop: '4%' },
 	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 	imgStyle: { height: 'auto' },
-	textImgStyle: { color: 'black', padding: '2%', fontSize: '1.6vw' },
+	textImgStyle: { color: 'black', padding: '2%', fontSize: '16' },
 };
 
 export default WhatWeDo;
