@@ -7,6 +7,8 @@ import NavBar from './NavBar';
 import WhatWeDo from './WhatWeDo';
 import Brands from './Brands';
 import Information from './Information';
+import Address from './Address';
+import Footer from './Footer'
 
 class Home extends Component {
 	componentWillMount() {
@@ -22,6 +24,8 @@ class Home extends Component {
 					<WhatWeDo />
 					<Brands />
 					<Information />
+					<Address />
+					<Footer />
 				</div>
 			</div>
 		);
@@ -30,10 +34,9 @@ class Home extends Component {
 
 const styles = {
 	contentStyle: {
-		position: 'absolute',
+		position: 'relative',
 		top: '100vh',
 		backgroundColor: 'white',
-		paddingTop: '1%',
 		display: 'block',
 		paddingBottom: 0,
 		width: '100%',

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.3.2",
     "animate.css": "^3.7.0",
     "materialize-css": "^1.0.0",
     "react": "^16.6.0",
@@ -13,8 +14,10 @@
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
+    "react-scroll": "^1.7.10",
     "react-slick": "^0.23.2",
     "redux": "^4.0.1",
+    "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },

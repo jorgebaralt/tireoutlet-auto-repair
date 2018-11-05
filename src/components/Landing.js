@@ -1,5 +1,6 @@
 import React from 'react';
 import LandingImage from '../assets/LandingImage.JPG';
+import { Link } from 'react-scroll';
 
 const Landing = () => {
 	const {
@@ -12,9 +13,21 @@ const Landing = () => {
 		<div style={landingImage}>
 			<div style={introTextContainer}>
 				<h1 style={introTextStyle}>Build, Fix & Maintain your Vehicle</h1>
-				<i className="material-icons animate-flicker" style={iconStyle}>
-					keyboard_arrow_down
-				</i>
+				<Link
+					activeClass="active"
+					to="what-we-do"
+					spy={true}
+					smooth={true}
+					duration={800}
+				>
+					<i
+						id="arrow_down"
+						className="material-icons animate-flicker"
+						style={iconStyle}
+					>
+						keyboard_arrow_down
+					</i>
+				</Link>
 			</div>
 		</div>
 	);
@@ -30,7 +43,7 @@ const styles = {
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		position: 'fixed',
-		top: 0
+		top: 0,
 	},
 	introTextContainer: {
 		marginLeft: 'auto',

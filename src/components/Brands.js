@@ -91,7 +91,7 @@ class Brands extends Component {
 			<div style={contentStyle}>
 				<h2 style={titleStyle}>Brands we work on</h2>
 				<h5 style={subtitleStyle}> All American, European, and Japanese </h5>
-				<div style={{ marginTop: '2%'}}>
+				<div style={{ marginTop: '2%', cursor: 'pointer'}}>
 					<Slider {...settings}>{this.renderBrandLogos()}</Slider>
 				</div>
 			</div>
@@ -106,7 +106,7 @@ const styles = {
 		paddingBottom: '2%',
 		paddingLeft: '10%',
 		paddingRight: '10%',
-		backgroundColor: '#EEEEEE',
+		backgroundColor: '#EEEEEE'
 	},
 	titleStyle: { fontWeight: 500, marginTop: '5%' },
 	subtitleStyle: { color: 'gray' },
