@@ -1,9 +1,11 @@
-import { NAVBAR_DECIDE_TRANSPARENT } from '../actions/types';
+import { NAVBAR_DECIDE_TRANSPARENT, CHANGE_ACTIVE } from '../actions/types';
 
 export default (state = {}, action) => {
 	switch (action.type) {
 		case NAVBAR_DECIDE_TRANSPARENT: 
-			return action.payload;
+			return {...state, transparent : action.payload};
+		case CHANGE_ACTIVE:
+			return {...state, active: action.payload}
 		default:
 			return state;
 	}

@@ -3,11 +3,11 @@ import { Field, reduxForm } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
 	renderTextField = ({ label, input, meta, ...custom }) => {
 		const { classes } = this.props;
-
 		return (
 			<TextField
 				id="standard-name"
@@ -25,7 +25,7 @@ class Footer extends Component {
 				}}
 				{...input}
 				{...custom}
-				error={meta.touched && meta.error}
+				error={meta.touched && meta.error !== undefined}
 			/>
 		);
 	};
@@ -67,7 +67,7 @@ class Footer extends Component {
 								/>
 								<button
 									type="submit"
-									class="waves-effect waves-light btn"
+									className="waves-effect waves-light btn"
 									style={{
 										backgroundColor: '#FFC107',
 										color: 'white',
@@ -83,27 +83,54 @@ class Footer extends Component {
 							<h5 className="white-text">Quick links</h5>
 							<ul>
 								<li>
-									<a className="grey-text text-lighten-3" href="#!">
+									<Link to="/" className="grey-text text-lighten-3" href="#!">
 										HOME
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a className="grey-text text-lighten-3" href="#!">
-										MECHANIC
-									</a>
+									<Link
+										to="services"
+										className="grey-text text-lighten-3"
+										href="#!"
+									>
+										SERVICES
+									</Link>
 								</li>
 								<li>
-									<a className="grey-text text-lighten-3" href="#!">
+									<Link to="/" className="grey-text text-lighten-3" href="#!">
 										LIFT-KIT
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a className="grey-text text-lighten-3" href="#!">
+									<Link to="/" className="grey-text text-lighten-3" href="#!">
 										GALLERY
-									</a>
+									</Link>
 								</li>
 							</ul>
+							<div>
+								<a
+									href="https://www.instagram.com/tireoutletautorepair/?hl=en"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: 'white' }}
+								>
+									<i className="fab fa-instagram" id="instagram" />{' '}
+									@tireoutletautorepair
+							</a>
+							</div>
+							<div>
+								<a
+									href="https://www.facebook.com/tireoutletautorepair/"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: 'white' }}
+								>
+									<i className="fab fa-facebook" id="facebook" />{' '}
+									@tireoutletautorepair
+							</a>
+							</div>
 						</div>
+						
 					</div>
 				</div>
 				<div className="footer-copyright">

@@ -20,30 +20,30 @@ import Porsche from '../assets/brands/porsche.png';
 import Toyota from '../assets/brands/toyota.png';
 
 const logos = [
-	{ brand: Audi, h: 200, w: 250 },
-	{ brand: Lexus, h: 200, w: 250 },
-	{ brand: Toyota, h: 200, w: 300 },
-	{ brand: Chevrolet, h: 200, w: 200 },
-	{ brand: Jeep, h: 200, w: 200 },
-	{ brand: Porsche, h: 150, w: 300 },
-	{ brand: Nissan, h: 200, w: 400 },
-	{ brand: Mercedesbenz, h: 150, w: 300 },
-	{ brand: Mazda, h: 150, w: 300 },
-	{ brand: Jaguar, h: 200, w: 200 },
-	{ brand: Landrover, h: 200, w: 300 },
-	{ brand: Honda, h: 150, w: 200 },
-	{ brand: Fiat, h: 150, w: 300 },
-	{ brand: Hyundai, h: 200, w: 300 },
-	{ brand: Dodge, h: 200, w: 350 },
-	{ brand: Ford, h: 200, w: 300 },
-	{ brand: Kia, h: 200, w: 200 },
-	{ brand: Mini, h: 200, w: 350 },
+	{ brand: Audi, key: 1, w: 250 },
+	{ brand: Lexus, key: 2, w: 250 },
+	{ brand: Toyota, key: 3, w: 300 },
+	{ brand: Chevrolet, key: 4, w: 200 },
+	{ brand: Jeep, key: 5, w: 200 },
+	{ brand: Porsche, key: 6, w: 300 },
+	{ brand: Nissan, key: 7, w: 400 },
+	{ brand: Mercedesbenz, key: 8, w: 300 },
+	{ brand: Mazda, key: 9, w: 300 },
+	{ brand: Jaguar, key: 10, w: 200 },
+	{ brand: Landrover, key: 11, w: 300 },
+	{ brand: Honda, key: 12, w: 200 },
+	{ brand: Fiat, key: 13, w: 300 },
+	{ brand: Hyundai, key: 14, w: 300 },
+	{ brand: Dodge, key: 15, w: 350 },
+	{ brand: Ford, key: 16, w: 300 },
+	{ brand: Kia, key: 17, w: 200 },
+	{ brand: Mini, key: 18 , w: 350 },
 ];
 class Brands extends Component {
 	renderBrandLogos = () => {
 		return logos.map((logo) => {
 			return (
-				<div style={{ padding: '20%' }}>
+				<div style={{ padding: '20%' }} key={logo.key}>
 					<img src={logo.brand} style={{ height: 'auto', width: '100%' }} />
 				</div>
 			);

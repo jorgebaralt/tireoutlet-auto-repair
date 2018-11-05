@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
-	state = { transparentNavBar: true, showDropdown: false };
+	state = {
+		transparentNavBar: true,
+		showDropdown: false,
+	};
 
 	componentDidMount() {
 		if (this.props.navBarEffect) {
@@ -49,11 +52,11 @@ class NavBar extends Component {
 						HOME
 					</Link>
 					<Link
-						to="/mechanic"
+						to="/services"
 						className="collection-item"
 						style={itemDropdownStyle}
 					>
-						MECHANIC
+						SERVICES
 					</Link>
 					<Link to="/" className="collection-item" style={itemDropdownStyle}>
 						LIFT-KIT
@@ -95,7 +98,9 @@ class NavBar extends Component {
 								Tire Outlet
 							</Link>
 							<div
-								className={ this.state.showDropdown ? 'Open DrawerToggle' : 'DrawerToggle' }
+								className={
+									this.state.showDropdown ? 'Open DrawerToggle' : 'DrawerToggle'
+								}
 								style={
 									this.props.navBarEffect && this.state.transparentNavBar
 										? { paddingTop: 26 }
@@ -112,7 +117,7 @@ class NavBar extends Component {
 								<div />
 							</div>
 							<ul id="nav-mobile" className="right hide-on-med-and-down">
-								<li>
+								<li className={this.props.active === 'home' ? 'active' : null}>
 									<Link
 										to="/"
 										style={
@@ -124,19 +129,21 @@ class NavBar extends Component {
 										HOME
 									</Link>
 								</li>
-								<li>
+								<li
+									className={this.props.active === 'services' ? 'active' : null}
+								>
 									<Link
-										to="/mechanic"
+										to="/services"
 										style={
 											this.state.transparentNavBar
 												? navBarTitlesTransparent
 												: navBarTitlesRegular
 										}
 									>
-										MECHANIC
+										SERVICES
 									</Link>
 								</li>
-								<li>
+								<li className={this.props.active === 'lift' ? 'active' : null}>
 									<Link
 										to="/"
 										style={
@@ -148,7 +155,9 @@ class NavBar extends Component {
 										LIFT-KIT
 									</Link>
 								</li>
-								<li>
+								<li
+									className={this.props.active === 'gallery' ? 'active' : null}
+								>
 									<Link
 										to="/"
 										style={
@@ -252,7 +261,10 @@ const styles = {
 };
 
 const mapStateToProps = (state) => {
-	return { navBarEffect: state.navBarEffect };
+	return {
+		navBarEffect: state.navBarEffect.transparent,
+		active: state.navBarEffect.active
+	 };
 };
 
 export default connect(mapStateToProps)(NavBar);

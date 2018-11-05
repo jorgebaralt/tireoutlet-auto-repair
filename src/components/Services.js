@@ -4,8 +4,10 @@ import * as actions from '../actions';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-class Mechanic extends Component {
+class Services extends Component {
 	componentWillMount() {
+		window.scrollTo(0, 0);
+		this.props.changeActive('services');
 		this.props.decideTransparent(false);
 	}
 
@@ -13,7 +15,10 @@ class Mechanic extends Component {
 		return (
 			<div>
 				<NavBar />
-				<div className="container" style={{ height: 700}}> Mechanic</div>
+				<div className="container" style={{ height: 700 }}>
+					{' '}
+					Services
+				</div>
 				<Footer />
 			</div>
 		);
@@ -23,4 +28,4 @@ class Mechanic extends Component {
 export default connect(
 	null,
 	actions
-)(Mechanic);
+)(Services);

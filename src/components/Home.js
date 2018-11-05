@@ -8,11 +8,13 @@ import WhatWeDo from './WhatWeDo';
 import Brands from './Brands';
 import Information from './Information';
 import Address from './Address';
-import Footer from './Footer'
+import Footer from './Footer';
 
 class Home extends Component {
 	componentWillMount() {
+		window.scrollTo(0, 0);
 		this.props.decideTransparent(true);
+		this.props.changeActive('home');
 	}
 
 	render() {
