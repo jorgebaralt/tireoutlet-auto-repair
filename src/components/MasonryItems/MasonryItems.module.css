@@ -1,0 +1,7 @@
+.masonryItem { /* Masonry bricks or child elements */
+    background: #fff;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+    padding: 1.5em;
+}

@@ -5,8 +5,8 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 // import Instafeed from 'instafeed.js';
 import Masonry from './Masonry/Masonry';
-import MasonryItem from './MasonryItem';
-import Lift from '../assets/gallery/Lift1.jpeg';
+import MasonryItem from './MasonryItems/MasonryItem';
+import Lift1 from '../assets/gallery/Lift1.jpeg';
 import Lift4 from '../assets/gallery/Lift4.jpeg';
 import Lift5 from '../assets/gallery/Lift5.jpeg';
 import Lift7 from '../assets/gallery/Lift7.jpeg';
@@ -40,7 +40,7 @@ class Gallery extends Component {
 					/>
 				</div>
 				<div className="item">
-					<img src={Lift} />
+					<img src={Lift1} />
 					<br />
 					Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit
 					deleniti possimus cumque accusantium rerum quibusdam.
@@ -84,6 +84,10 @@ class Gallery extends Component {
 					<p style={titleStyle}>Welcome to our Gallery</p>
 					<Masonry>
 						<MasonryItem>
+							<h1>Follow us</h1> <br />{' '}
+							<p style={{ fontSize: 20 }}>@tireoutletautorepair</p>
+						</MasonryItem>
+						<MasonryItem>
 							<img src={Allignment} style={ImgiFrameStyle} />
 							<br />
 							Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit
@@ -103,19 +107,19 @@ class Gallery extends Component {
 							/>
 						</MasonryItem>
 						<MasonryItem>
-							<img src={Allignment} style={ImgiFrameStyle} />
+							<img src={Lift1} style={ImgiFrameStyle} />
 							<br />
 							Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit
 							deleniti possimus cumque accusantium rerum quibusdam.
 						</MasonryItem>
 						<MasonryItem>
-							<img src={Allignment} style={ImgiFrameStyle} />
+							<img src={Lift3} style={ImgiFrameStyle} />
 							<br />
 							Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit
 							deleniti possimus cumque accusantium rerum quibusdam.
 						</MasonryItem>
 						<MasonryItem>
-							<img src={Allignment} style={ImgiFrameStyle} />
+							<img src={Lift4} style={ImgiFrameStyle} />
 							<br />
 							Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit
 							deleniti possimus cumque accusantium rerum quibusdam.
