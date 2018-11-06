@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import NavBar from './NavBar';
 import Footer from './Footer';
-
+import AllServices from './AllServices';
+import OilChange from './OilChange';
 class Services extends Component {
 	componentWillMount() {
 		window.scrollTo(0, 0);
@@ -15,15 +16,24 @@ class Services extends Component {
 		return (
 			<div>
 				<NavBar />
-				<div className="container" style={{ height: 700 }}>
-					{' '}
-					Services
-				</div>
+				<AllServices />
+				<OilChange />
 				<Footer />
 			</div>
 		);
 	}
 }
+
+const styles = {
+	contentStyle: {
+		position: 'relative',
+		top: '100vh',
+		backgroundColor: 'white',
+		display: 'block',
+		paddingBottom: 0,
+		width: '100%',
+	},
+};
 
 export default connect(
 	null,
