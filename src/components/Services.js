@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import AllServices from './AllServices';
 import OilChange from './OilChange';
+import TireServices from './TireServices';
+import Mechanic from './Mechanic';
 class Services extends Component {
 	componentWillMount() {
 		window.scrollTo(0, 0);
@@ -16,8 +17,9 @@ class Services extends Component {
 		return (
 			<div>
 				<NavBar />
-				<AllServices />
 				<OilChange />
+				<TireServices />
+				<Mechanic />
 				<Footer />
 			</div>
 		);

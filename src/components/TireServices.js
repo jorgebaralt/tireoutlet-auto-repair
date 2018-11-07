@@ -1,10 +1,10 @@
 import React from 'react';
 
-const OilChange = () => {
+const TireServices = () => {
 	const { rowStyle, colStyle, contentStyle, titleStyle } = styles;
 	return (
 		<div style={contentStyle}>
-			<h2 style={titleStyle}>Oil Change</h2>
+			<h2 style={titleStyle}>Tire Services</h2>
 		</div>
 	);
 };
@@ -14,14 +14,14 @@ const styles = {
 		textAlign: 'center',
 		paddingLeft: '10%',
 		paddingRight: '10%',
-		height: '93vh',
-		backgroundColor: '#424242',
-		color: 'white',
 		paddingTop: '1%',
+		height: '93vh',
+		backgroundColor: 'gray',
+		color: 'white'
 	},
 	titleStyle: { fontWeight: 500 },
 	rowStyle: { marginTop: '4%' },
 	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 };
 
-export default OilChange;
+export default TireServices;

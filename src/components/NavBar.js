@@ -262,7 +262,7 @@ const styles = {
 		textAlign: 'center',
 		fontSize: 22,
 		backgroundColor: '#FFC107',
-		opacity: 0.8,
+		opacity: 0.95,
 		color: 'black',
 		border: 'none',
 		boxShadow: 'none',

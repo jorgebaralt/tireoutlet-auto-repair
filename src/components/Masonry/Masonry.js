@@ -3,7 +3,7 @@ import classes from './Masonry.module.css';
 
 const Masonry = (props) => {
 	return (
-		<div style={{ margin: '1.5em auto', width: '90%' }}>
+		<div style={{ margin: '0 auto', width: '80%' }}>
 			<div className={classes.masonry}>{props.children}</div>
 		</div>
 	);
