@@ -6,6 +6,7 @@ import Footer from './Footer';
 import OilChange from './OilChange';
 import TireServices from './TireServices';
 import Mechanic from './Mechanic';
+import SideNav from './SideNav/SideNav';
 class Services extends Component {
 	componentWillMount() {
 		window.scrollTo(0, 0);
@@ -15,11 +16,14 @@ class Services extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{ backgroundColor: '#eee' }}>
 				<NavBar />
-				<OilChange />
-				<TireServices />
-				<Mechanic />
+				<SideNav />
+				<div className="main">
+					<OilChange />
+					<TireServices />
+					<Mechanic />
+				</div>
 				<Footer />
 			</div>
 		);
@@ -35,6 +39,8 @@ const styles = {
 		paddingBottom: 0,
 		width: '100%',
 	},
+	main: {},
+	sideNav: {},
 };
 
 export default connect(

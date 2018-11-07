@@ -4,8 +4,33 @@ import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
+import { compose } from 'recompose';
 
+let offset;
 class Footer extends Component {
+	constructor(props) {
+		super(props);
+		this.footerRef = React.createRef();
+	}
+
+	reachedFooter = () => {
+		if (window.scrollY > this.footerRef.current.offsetTop - offset) {
+			this.props.sideNav('absolute');
+		} else {
+			this.props.sideNav('fixed');
+		}
+	};
+
+	componentDidMount() {
+		window.innerWidth < 560 ? offset = 800 : offset = 1000;
+		window.addEventListener('scroll', this.reachedFooter);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.reachedFooter);
+	}
+
 	renderTextField = ({ label, input, meta, ...custom }) => {
 		const { classes } = this.props;
 		return (
@@ -31,6 +56,7 @@ class Footer extends Component {
 	};
 
 	onSubmit = (values) => {
+		// TODO: send email
 		console.log(values);
 	};
 
@@ -38,7 +64,7 @@ class Footer extends Component {
 		const { handleSubmit } = this.props;
 		const { classes } = this.props;
 		return (
-			<footer className="page-footer">
+			<footer className="page-footer" ref={this.footerRef}>
 				<div className="container">
 					<div className="row">
 						<div className="col l6 s12">
@@ -97,12 +123,20 @@ class Footer extends Component {
 									</Link>
 								</li>
 								<li>
-									<Link to="/lift" className="grey-text text-lighten-3" href="#!">
+									<Link
+										to="/lift"
+										className="grey-text text-lighten-3"
+										href="#!"
+									>
 										LIFT-KIT
 									</Link>
 								</li>
 								<li>
-									<Link to="/gallery" className="grey-text text-lighten-3" href="#!">
+									<Link
+										to="/gallery"
+										className="grey-text text-lighten-3"
+										href="#!"
+									>
 										GALLERY
 									</Link>
 								</li>
@@ -116,7 +150,7 @@ class Footer extends Component {
 								>
 									<i className="fab fa-instagram" id="instagram" />{' '}
 									@tireoutletautorepair
-							</a>
+								</a>
 							</div>
 							<div>
 								<a
@@ -127,10 +161,9 @@ class Footer extends Component {
 								>
 									<i className="fab fa-facebook" id="facebook" />{' '}
 									@tireoutletautorepair
-							</a>
+								</a>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 				<div className="footer-copyright">
@@ -180,9 +213,14 @@ function validate(value) {
 	return errors;
 }
 
-export default withStyles(styles)(
+export default compose(
+	withStyles(styles),
+	connect(
+		null,
+		actions
+	),
 	reduxForm({
 		validate: validate,
 		form: 'contactForm',
-	})(Footer)
-);
+	})
+)(Footer);
