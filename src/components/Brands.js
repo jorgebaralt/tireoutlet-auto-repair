@@ -64,8 +64,6 @@ class Brands extends Component {
 					settings: {
 						slidesToShow: 3,
 						slidesToScroll: 1,
-						infinite: true,
-						dots: true
 					}
 				},
 				{
@@ -73,7 +71,6 @@ class Brands extends Component {
 					settings: {
 						slidesToShow: 2,
 						slidesToScroll: 1,
-						initialSlide: 2
 					}
 				},
 				{

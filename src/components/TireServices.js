@@ -16,8 +16,8 @@ const styles = {
 		paddingRight: '10%',
 		paddingTop: '1%',
 		height: '93vh',
-		backgroundColor: 'gray',
-		color: 'white'
+		backgroundColor: 'white',
+		color: 'black',
 	},
 	titleStyle: { fontWeight: 500 },
 	rowStyle: { marginTop: '4%' },

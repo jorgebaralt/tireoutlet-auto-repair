@@ -15,11 +15,10 @@ const styles = {
 		paddingLeft: '10%',
 		paddingRight: '10%',
 		height: '93vh',
-		backgroundColor: '#424242',
-		color: 'white',
+		backgroundColor: 'rgb(238, 238, 238)',
 		paddingTop: '1%',
 	},
-	titleStyle: { fontWeight: 500 },
+	titleStyle: { fontWeight: 500, color: 'black' },
 	rowStyle: { marginTop: '4%' },
 	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 };

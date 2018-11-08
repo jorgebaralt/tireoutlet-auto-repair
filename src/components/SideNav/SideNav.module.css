@@ -1,35 +1,139 @@
-.sidenav {
+@media only screen and (min-width: 600px) {
+	.sidenav {
+		width: 60px;
+		overflow-x: hidden;
+		margin-top: 0.05vh;
+		height: 100%;
+		background-color: #616161;
+	}
+
+	.sidenavClosed {
     width: 60px;
-    z-index: 1;
-    background: #eee;
-	overflow-x: hidden;
-	margin-top: 0.05vh;
-	height: 100%;
+    transition: all 0.25s ease-out;
+	}
+
+	.sidenavOpen {
+    width: 200px;
+    transition: all 0.25s ease-out;
+	}
+	.textMenu{
+		display: inline-block;
+		font-size: 24px;
+		margin-top: 22px;
+		margin-left: 5px;
+		font-weight: 500
+	}
+	.textHidden {
+		visibility: hidden;
+    -webkit-transition: visibility 0.25s linear;
+       -moz-transition: visibility 0.25s linear;
+        -ms-transition: visibility 0.25s linear;
+         -o-transition: visibility 0.25s linear;
+            transition: visibility 0.25s linear;
+	}
+	.textShow {
+		visibility: visible;
+     -webkit-transition: visibility 0.25s linear;
+        -moz-transition: visibility 0.25s linear;
+         -ms-transition: visibility 0.25s linear;
+          -o-transition: visibility 0.25s linear;
+             transition: visibility 0.25s linear;
+}
 }
 
-.absolute{
+.absolute {
 	position: absolute;
 }
 
-.fixed{
+.fixed {
 	position: fixed;
 }
 
 .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
 }
 
 .sidenav a:hover {
-    color: #064579;
+	color: #ffc107;
 }
-.verticalText {
-	writing-mode: vertical-rl;
-	text-orientation: upright;
-	margin-left: 2px;
-	height: 30%;
-	text-align: center;
+
+/* Hamburger */
+.hamburger {
+	padding: 15px 10px;
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+  overflow: visible;
+  transition: padding-left 0.25s ease-in-out;
+}
+.hamburger:hover {
+	opacity: 0.7;
+}
+.hamburger.isActive:hover {
+	opacity: 0.7;
+}
+.hamburgerExtended{
+  padding-left: 150px;
+  transition: padding-left 0.25s ease-in-out;
+}
+.hamburger.isActive .hamburgerInner,
+.hamburger.isActive .hamburgerInner::before,
+.hamburger.isActive .hamburgerInner::after {
+	background-color: #000;
+}
+
+.hamburgerBox {
+	width: 40px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburgerInner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburgerInner,
+.hamburgerInner::before,
+.hamburgerInner::after {
+	width: 40px;
+	height: 4px;
+	background-color: #000;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+.hamburgerInner::before,
+.hamburgerInner::after {
+	content: '';
+	display: block;
+}
+.hamburgerInner::before {
+	top: -10px;
+}
+.hamburgerInner::after {
+	bottom: -10px;
+}
+
+.hamburgerArrow.isActive .hamburgerInner::before {
+	transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+.hamburgerArrow.isActive .hamburgerInner::after {
+	transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
 }
