@@ -24,7 +24,7 @@ class Footer extends Component {
 	};
 
 	componentDidMount() {
-		window.innerWidth < 560 ? offset = 800 : offset = 1000;
+		window.innerWidth < 560 ? offset = 780 : offset = 900;
 		window.addEventListener('scroll', this.reachedFooter);
 	}
 	componentWillUnmount() {
