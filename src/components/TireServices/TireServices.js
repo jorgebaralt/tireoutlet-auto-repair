@@ -1,11 +1,14 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
-const Mechanic = () => {
+const TireServices = () => {
 	const { rowStyle, colStyle, contentStyle, titleStyle } = styles;
 	return (
-		<div style={contentStyle}>
-			<h2 style={titleStyle}>Mechanic</h2>
-		</div>
+		<Element name="tires">
+			<div style={contentStyle}>
+				<h2 style={titleStyle}>Tire Services</h2>
+			</div>
+		</Element>
 	);
 };
 const styles = {
@@ -14,13 +17,13 @@ const styles = {
 		textAlign: 'center',
 		paddingLeft: '10%',
 		paddingRight: '10%',
-		height: '93vh',
-		backgroundColor: '#ECEFF1',
 		paddingTop: '1%',
+		height: '100vh',
+		backgroundColor: 'white',
 	},
-	titleStyle: { fontWeight: 500 },
+	titleStyle: { fontWeight: 500, paddingTop: 30  },
 	rowStyle: { marginTop: '4%' },
 	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 };
 
-export default Mechanic;
+export default TireServices;

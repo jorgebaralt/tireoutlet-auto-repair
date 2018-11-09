@@ -1,27 +1,29 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
-const TireServices = () => {
+const OilChange = () => {
 	const { rowStyle, colStyle, contentStyle, titleStyle } = styles;
 	return (
-		<div style={contentStyle}>
-			<h2 style={titleStyle}>Tire Services</h2>
-		</div>
+		<Element name="oil">
+			<div style={contentStyle}>
+				<h2 style={titleStyle}>Oil Change</h2>
+			</div>
+		</Element>
+		
 	);
 };
 const styles = {
 	contentStyle: {
-		paddingtop: 50,
 		textAlign: 'center',
 		paddingLeft: '10%',
 		paddingRight: '10%',
+		height: '100vh',
+		backgroundColor: 'rgb(238, 238, 238)',
 		paddingTop: '1%',
-		height: '93vh',
-		backgroundColor: 'white',
-		color: 'black',
 	},
-	titleStyle: { fontWeight: 500 },
+	titleStyle: { fontWeight: 500, paddingTop: 30 },
 	rowStyle: { marginTop: '4%' },
 	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 };
 
-export default TireServices;
+export default OilChange;

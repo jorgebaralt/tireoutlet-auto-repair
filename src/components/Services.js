@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import OilChange from './OilChange';
-import TireServices from './TireServices';
-import Mechanic from './Mechanic';
+import OilChange from './OilChange/OilChange';
+import TireServices from './TireServices/TireServices';
+import Mechanic from './Mechanic/Mechanic';
 import SideNav from './SideNav/SideNav';
 class Services extends Component {
 	state = { width: window.innerWidth };
@@ -30,8 +30,8 @@ class Services extends Component {
 	decideStyle = () => {
 		if (this.state.width > 600){
 			return this.props.expandSideNavbar
-				? { marginLeft: 200, transition: 'marginLeft 0.25s ease-in-out' }
-				: { marginLeft: 60, transition: 'marginLeft 0.25s ease-in-out' };
+				? { marginLeft: 200, transition: 'margin-left 0.25s ease-in-out' }
+				: { marginLeft: 60, transition: 'margin-left 0.25s ease-in-out' };
 		} else {
 			return {marginLeft : 0}
 		}
@@ -54,19 +54,6 @@ class Services extends Component {
 		);
 	}
 }
-
-const styles = {
-	contentStyle: {
-		position: 'relative',
-		top: '100vh',
-		backgroundColor: 'white',
-		display: 'block',
-		paddingBottom: 0,
-		width: '100%',
-	},
-	main: {},
-	sideNav: {},
-};
 
 const mapStateToProps = (state) => {
 	return {

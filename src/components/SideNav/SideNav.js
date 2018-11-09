@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './SideNav.module.css';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import { Link } from 'react-scroll';
 import TireIcon from '../../assets/tire.svg';
 import GearIcon from '../../assets/gear.svg';
 import OilIcon from '../../assets/diesel.svg';
@@ -19,22 +20,6 @@ class SideNav extends Component {
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.checkWidth);
 	}
-	renderSidebarText = (textMenu) => {
-		if (this.props.expandSideNavbar) {
-			return (
-				<span
-					style={{
-						display: 'inline-block',
-						fontSize: 30,
-						marginTop: 20,
-						transition: 'all 0.25s ease-in-out',
-					}}
-				>
-					{textMenu}
-				</span>
-			);
-		}
-	};
 
 	render() {
 		const sidenavClass = [classes.sidenav];
@@ -60,6 +45,7 @@ class SideNav extends Component {
 
 		if (this.state.width > 600) {
 			return (
+				
 				<div className={sidenavClass.join(' ')}>
 					<div
 						className={hamburgerStyle.join(' ')}
@@ -72,41 +58,45 @@ class SideNav extends Component {
 						</div>
 					</div>
 					<div>
-						<div style={{ cursor: 'pointer' }}>
-							<img src={OilIcon} alt="" style={styles.iconStyle} />
-							<span
-								className={textMenuClass.join(' ')}
-								style={styles.textStyle}
-							>
-								OIL CHANGE
-							</span>
-						</div>
-						<div
-							style={{ position: 'absolute', marginTop: 60, cursor: 'pointer' }}
+						<Link
+							activeClass="active"
+							to="oil"
+							spy={true}
+							smooth={true}
+							duration={800}
+							style={{ margin: 0, padding: 0}}
 						>
-							<img src={TireIcon} alt="" style={styles.iconStyle} />
-							<span
-								className={textMenuClass.join(' ')}
-								style={styles.textStyle}
-							>
-								TIRES
-							</span>
-						</div>
-						<div
-							style={{
-								position: 'absolute',
-								marginTop: 120,
-								cursor: 'pointer',
-							}}
+							<div className={classes.oil}>
+								<img src={OilIcon} alt="" className={classes.iconStyle} />
+								<span className={textMenuClass.join(' ')}>OIL CHANGE</span>
+							</div>
+						</Link>
+						<Link
+							activeClass="active"
+							to="tires"
+							spy={true}
+							smooth={true}
+							duration={800}
+							style={{ margin: 0, padding: 0 }}
 						>
-							<img src={GearIcon} alt="" style={styles.iconStyle} />
-							<span
-								className={textMenuClass.join(' ')}
-								style={styles.textStyle}
-							>
-								MECHANIC
-							</span>
-						</div>
+							<div className={classes.tires}>
+								<img src={TireIcon} alt="" className={classes.iconStyle} />
+								<span className={textMenuClass.join(' ')}>TIRES</span>
+							</div>
+						</Link>
+						<Link
+							activeClass="active"
+							to="mechanic"
+							spy={true}
+							smooth={true}
+							duration={800}
+							style={{ margin: 0, padding: 0 }}
+						>
+							<div className={classes.mechanic}>
+								<img src={GearIcon} alt="" className={classes.iconStyle} />
+								<span className={textMenuClass.join(' ')}>MECHANIC</span>
+							</div>
+							</Link>
 					</div>
 				</div>
 			);
@@ -114,21 +104,6 @@ class SideNav extends Component {
 		return <div />;
 	}
 }
-
-const styles = {
-	iconStyle: {
-		float: 'left',
-		width: 40,
-		height: 40,
-		marginTop: 20,
-		marginLeft: 10,
-		transition: 'all 0.25s ease-in-out',
-	},
-	textStyle: {
-		position: 'absolute',
-		whiteSpace: 'nowrap',
-	},
-};
 
 const mapStateToProps = (state) => {
 	return {
