@@ -34,7 +34,7 @@ const tireServicesData = [
 const renderData = () => {
 	return tireServicesData.map((service) => {
 		return (
-			<div className="card" style={{ marginTop: 20}}>
+			<div key={service.id} className="card" style={{ marginTop: 20}}>
 				<div className="card-body">
 					<div className="row">
 						<div className="col-lg-6">
@@ -53,7 +53,6 @@ const renderData = () => {
 }
 
 const TireServices = () => {
-	const { rowStyle, colStyle, contentStyle, titleStyle } = styles;
 	return (
 		<Element name="tires">
 			<div className={classes.content}>
@@ -62,19 +61,6 @@ const TireServices = () => {
 			</div>
 		</Element>
 	);
-};
-const styles = {
-	contentStyle: {
-		paddingtop: 50,
-		textAlign: 'center',
-		paddingLeft: '10%',
-		paddingRight: '10%',
-		backgroundColor: 'white',
-		paddingBottom: 40
-	},
-	titleStyle: { fontWeight: 500, paddingTop: 70, margin: 0  },
-	rowStyle: { marginTop: '4%' },
-	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
 };
 
 export default TireServices;

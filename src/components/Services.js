@@ -39,7 +39,6 @@ class Services extends Component {
 	};
 
 	render() {
-		console.log(this.props.expandSideNavbar);
 		return (
 			<div style={{ backgroundColor: '#616161', padding: 0 }}>
 				<NavBar />

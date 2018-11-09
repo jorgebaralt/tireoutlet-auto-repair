@@ -44,7 +44,7 @@ class Brands extends Component {
 		return logos.map((logo) => {
 			return (
 				<div style={{ padding: '20%' }} key={logo.key}>
-					<img src={logo.brand} style={{ height: 'auto', width: '100%' }} />
+					<img src={logo.brand} style={{ height: 'auto', width: '100%' }} alt="" />
 				</div>
 			);
 		});

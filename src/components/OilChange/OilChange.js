@@ -30,7 +30,7 @@ const renderData = () => {
 	const cardStyle = classes.card + ' card';
 	return oilData.map((oil) => {
 		return (
-			<div className="col-lg-4">
+			<div key={oil.id} className="col-lg-4">
 				<div className={cardStyle}>
 					<div className="card-body">
 						<h4>{oil.title}</h4>

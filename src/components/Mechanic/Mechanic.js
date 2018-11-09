@@ -71,14 +71,14 @@ const mechData = [
 
 const renderData = () => {
 	const cardStyle = classes.card + ' card';
-	return mechData.map((oil) => {
+	return mechData.map((mech) => {
 		return (
-			<div className=" col-md-4 col-sm-6">
+			<div key={mech.id} className=" col-md-4 col-sm-6">
 				<div className={cardStyle}>
 					<div className="card-body">
-						<h4>{oil.title}</h4>
-						<p className={classes.price}>{oil.price}</p>
-						<p>{oil.description}</p>
+						<h4>{mech.title}</h4>
+						<p className={classes.price}>{mech.price}</p>
+						<p>{mech.description}</p>
 					</div>
 				</div>
 			</div>
@@ -87,11 +87,11 @@ const renderData = () => {
 };
 
 const Mechanic = () => {
-	const { rowStyle, colStyle, contentStyle, titleStyle } = styles;
+
 	return (
 		<Element name="mechanic">
-			<div style={contentStyle}>
-				<h2 style={titleStyle}>Mechanic</h2>
+			<div className={classes.content}>
+				<h2 className={classes.title}>Mechanic</h2>
 				<div className="row" style={{ marginTop: 20, marginBottom: 0, paddingBottom: 30 }}>
 					{renderData()}
 				</div>
@@ -100,16 +100,5 @@ const Mechanic = () => {
 	);
 };
 
-const styles = {
-	contentStyle: {
-		textAlign: 'center',
-		paddingLeft: '10%',
-		paddingRight: '10%',
-		backgroundColor: '#ECEFF1',
-	},
-	titleStyle: { fontWeight: 500, paddingTop: 70, margin: 0 },
-	rowStyle: { marginTop: '4%' },
-	colStyle: { paddingLeft: '5%', paddingRight: '5%' },
-};
 
 export default Mechanic;
