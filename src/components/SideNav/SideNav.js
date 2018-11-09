@@ -45,7 +45,6 @@ class SideNav extends Component {
 
 		if (this.state.width > 600) {
 			return (
-				
 				<div className={sidenavClass.join(' ')}>
 					<div
 						className={hamburgerStyle.join(' ')}

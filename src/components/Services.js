@@ -30,8 +30,8 @@ class Services extends Component {
 	decideStyle = () => {
 		if (this.state.width > 600){
 			return this.props.expandSideNavbar
-				? { marginLeft: 200, transition: 'margin-left 0.25s ease-in-out' }
-				: { marginLeft: 60, transition: 'margin-left 0.25s ease-in-out' };
+				? { marginLeft: 200, transition: 'margin-left 0.25s ease-in-out', padding: 0 }
+				: { marginLeft: 60, transition: 'margin-left 0.25s ease-in-out', padding: 0 };
 		} else {
 			return {marginLeft : 0}
 		}
@@ -41,7 +41,7 @@ class Services extends Component {
 	render() {
 		console.log(this.props.expandSideNavbar);
 		return (
-			<div style={{ backgroundColor: '#616161' }}>
+			<div style={{ backgroundColor: '#616161', padding: 0 }}>
 				<NavBar />
 				<SideNav />
 				<div style={this.decideStyle()}>

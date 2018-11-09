@@ -1,0 +1,36 @@
+.content {
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #ECEFF1;
+	padding-bottom: 30px;
+}
+
+.title{
+	font-weight: 500;
+	padding-top: 70px;
+	margin: 0
+}
+@media only screen and (min-width: 1024px){
+	.card{
+		height: 260px;
+		margin-top: 20px;
+	}
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+	.card{
+		height: 320px;
+		margin-top: 20px;
+	}
+}
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+	.card{
+		height: 290px;
+		margin-top: 10px;
+	}
+}
+@media only screen and (max-width: 539px) and (min-width: 0px) {
+	.card{
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,18 @@
+.price{
+	color: #FFC107;
+	font-weight: bolder;
+}
+
+.content {
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #EFEBE9;
+	padding-bottom: 30px;
+}
+
+.title{
+	font-weight: 500;
+	padding-top: 70px;
+	margin: 0
+}
