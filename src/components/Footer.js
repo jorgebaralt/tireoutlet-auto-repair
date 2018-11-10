@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
+import InstagramIcon from '../assets/instagram-logo.svg';
+import FacebookIcon from '../assets/facebook-logo-button.svg';
 
 let offset;
 class Footer extends Component {
@@ -24,7 +26,7 @@ class Footer extends Component {
 	};
 
 	componentDidMount() {
-		window.innerWidth < 560 ? offset = 780 : offset = 900;
+		window.innerWidth < 560 ? (offset = 780) : (offset = 900);
 		window.addEventListener('scroll', this.reachedFooter);
 	}
 	componentWillUnmount() {
@@ -141,17 +143,7 @@ class Footer extends Component {
 									</Link>
 								</li>
 							</ul>
-							<div>
-								<a
-									href="https://www.instagram.com/tireoutletautorepair/?hl=en"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: 'white' }}
-								>
-									<i className="fab fa-instagram" id="instagram" />{' '}
-									@tireoutletautorepair
-								</a>
-							</div>
+
 							<div>
 								<a
 									href="https://www.facebook.com/tireoutletautorepair/"
@@ -159,8 +151,15 @@ class Footer extends Component {
 									rel="noopener noreferrer"
 									style={{ color: 'white' }}
 								>
-									<i className="fab fa-facebook" id="facebook" />{' '}
-									@tireoutletautorepair
+									<img src={FacebookIcon} style={{ height: 50 }} alt="" />
+								</a>
+								<a
+									href="https://www.instagram.com/tireoutletautorepair/?hl=en"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: 'white' }}
+								>
+									<img src={InstagramIcon} style={{ height: 50, marginLeft: 10 }} alt="" />
 								</a>
 							</div>
 						</div>
