@@ -87,18 +87,20 @@ const renderData = () => {
 };
 
 const Mechanic = () => {
-
 	return (
 		<Element name="mechanic">
 			<div className={classes.content}>
 				<h2 className={classes.title}>Mechanic</h2>
-				<div className="row" style={{ marginTop: 20, marginBottom: 0, paddingBottom: 30 }}>
+				<h5 style={{ color: 'gray' }}>Some of the most popular services we offer</h5>
+				<div
+					className="row"
+					style={{ marginTop: 20, marginBottom: 0, paddingBottom: 30 }}
+				>
 					{renderData()}
 				</div>
 			</div>
 		</Element>
 	);
 };
-
 
 export default Mechanic;

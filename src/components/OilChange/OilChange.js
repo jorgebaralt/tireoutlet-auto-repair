@@ -48,6 +48,7 @@ const OilChange = () => {
 		<Element name="oil">
 			<div className={classes.content}>
 				<h2 className={classes.title}>Oil Change</h2>
+				<h5 style={{ color: 'gray' }}>The blood of your vehicle</h5>
 				<div className="row" style={{ marginTop: 20 }}>
 					{renderData()}
 				</div>
