@@ -6,7 +6,12 @@ import '../App.css';
 import Services from './Services';
 import Lift from './Lift';
 import Gallery from './Gallery';
+import ReactGA from 'react-ga';
 class App extends Component {
+	componentDidMount() {
+		ReactGA.initialize('UA-129267605-1');
+		ReactGA.pageview(window.location.pathname + window.location.search);
+	}
 	render() {
 		return (
 			<div>
