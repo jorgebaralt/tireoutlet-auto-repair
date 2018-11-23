@@ -53,11 +53,12 @@ class Brands extends Component {
 	render() {
 		const settings = {
 			infinite: true,
-			speed: 300,
+			speed: 250,
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			autoplay: true,
 			arrows: false,
+			draggable: false,
 			responsive: [
 				{
 					breakpoint: 1024,
@@ -88,7 +89,7 @@ class Brands extends Component {
 			<div style={contentStyle}>
 				<h2 style={titleStyle}>Brands we work on</h2>
 				<h5 style={subtitleStyle}> All American, European, and Japanese </h5>
-				<div style={{ marginTop: '2%', cursor: 'pointer'}}>
+				<div style={{ marginTop: '2%'}}>
 					<Slider {...settings}>{this.renderBrandLogos()}</Slider>
 				</div>
 			</div>

@@ -14,5 +14,61 @@
 .title{
 	font-weight: 500;
 	padding-top: 70px;
-	margin: 0
+	margin: 0;
+	color: black;
 }
+
+.flexContainer{
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap
+}
+
+/* starting at 992 */
+@media only screen and (min-width: 1155px) {
+	.title{
+		font-size: 90px;
+		font-weight: 900;
+		letter-spacing: 0.7rem;
+		color: #343a40
+	}
+	.colLeft{
+		width: 50%;
+		display: flex;
+  		flex-direction: column;
+  		justify-content: center;
+	}
+	.colRight{
+		width: 50%
+	}
+	.breakLine{
+		display: block
+	}
+	.subTitle{
+		font-size: 30px
+	}
+}
+
+ /* from 0 to 991 */
+@media only screen and (max-width: 1154px) and (min-width: 0px) {	
+    .title{
+		font-size: 50px;
+	}
+	.colLeft{
+		width: 100%
+	}
+	.colRight{
+		width: 100%
+	}
+		.subTitle{
+		font-size: 25px
+	}
+}
+
+.customCard{
+	margin-top: 20px;
+	widows: 80%;
+	margin-left: 10%;
+	border-bottom: 2px solid red
+}
+

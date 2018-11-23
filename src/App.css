@@ -233,7 +233,7 @@ fieldset{
 @media only screen and (max-width: 539px) and (min-width: 0px) {
   .masonry {
     column-count: 1;
-  }
+  } 
 }
 
 @media screen and (min-width: 600px) {
