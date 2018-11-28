@@ -7,10 +7,16 @@ import Services from './Services';
 import Lift from './Lift';
 import Gallery from './Gallery';
 import ReactGA from 'react-ga';
+import smoothscroll from 'smoothscroll-polyfill';
 class App extends Component {
 	componentDidMount() {
 		ReactGA.initialize('UA-129267605-1');
 		ReactGA.pageview(window.location.pathname + window.location.search);
+		//check if browser is mobile
+		if (/Mobi|Android/i.test(navigator.userAgent)) {
+			smoothscroll.polyfill();
+		}
+
 	}
 	render() {
 		return (
