@@ -12,7 +12,6 @@ const Landing = (props) => {
 		backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) ), url(${props.image})`,
 		height: '100vh',
 		width: '100vw',
-		backgroundAttachment: 'fixed',
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
