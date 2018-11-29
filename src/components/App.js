@@ -12,10 +12,10 @@ class App extends Component {
 	componentDidMount() {
 		ReactGA.initialize('UA-129267605-1');
 		ReactGA.pageview(window.location.pathname + window.location.search);
-		//check if browser is mobile
-		if (/Mobi|Android/i.test(navigator.userAgent)) {
-			smoothscroll.polyfill();
-		}
+		// //check if browser is mobile
+		// if (/Mobi|Android/i.test(navigator.userAgent)) {
+		// 	smoothscroll.polyfill();
+		// }
 
 	}
 	render() {
