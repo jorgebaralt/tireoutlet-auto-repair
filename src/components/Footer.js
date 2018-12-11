@@ -18,6 +18,7 @@ class Footer extends Component {
 	}
 
 	reachedFooter = () => {
+		//when footer is in viewport, change it to absolute
 		if (window.scrollY > this.footerRef.current.offsetTop - offset) {
 			this.props.sideNav('absolute');
 		} else {
